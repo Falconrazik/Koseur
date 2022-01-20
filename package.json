@@ -1,0 +1,49 @@
+{
+    "name": "client",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev -p 3001",
+        "build": "next build",
+        "start": "next start"
+    },
+    "dependencies": {
+        "@brainhubeu/react-carousel": "^2.0.3",
+        "@material-ui/core": "^4.11.4",
+        "@types/react-no-ssr": "^1.1.1",
+        "@types/react-slick": "^0.23.4",
+        "@types/styled-components": "^5.1.9",
+        "axios": "^0.21.1",
+        "cookie-cutter": "^0.2.0",
+        "cookies": "^0.8.0",
+        "dotenv": "^9.0.1",
+        "draft-js": "^0.11.7",
+        "formik": "^2.2.6",
+        "framer-motion": "^4.1.16",
+        "next": "^10.2.0",
+        "nuka-carousel": "^4.7.8",
+        "react": "17.0.2",
+        "react-anchor-link-smooth-scroll": "^1.0.12",
+        "react-bootstrap": "^1.6.0",
+        "react-burger-menu": "^3.0.6",
+        "react-dom": "17.0.2",
+        "react-icons": "^4.2.0",
+        "react-no-ssr": "^1.1.0",
+        "react-parallax": "^3.3.0",
+        "sass": "^1.32.8",
+        "styled-components": "^5.3.0",
+        "yup": "^0.32.9"
+    },
+    "devDependencies": {
+        "@types/brainhubeu__react-carousel": "^2.0.2",
+        "@types/cookies": "^0.7.6",
+        "@types/draft-js": "^0.11.1",
+        "@types/node": "^14.14.37",
+        "@types/react": "^17.0.3",
+        "@types/react-anchor-link-smooth-scroll": "^1.0.1",
+        "@types/react-burger-menu": "^2.8.0",
+        "@types/react-dom": "^17.0.5",
+        "@types/scrollbooster": "^2.2.0",
+        "typescript": "^4.2.4"
+    }
+}

@@ -1,0 +1,24 @@
+@use '../../styles/mixins.module.sass' as mixins 
+
+.Header
+    color: white
+    z-index: 1
+    font-size: 1.5rem
+    width: 100%
+    padding: 1rem 1rem 0
+    display: flex
+    justify-content: space-between
+    font-family: -apple-system, "Poiret One"
+
+    & > *
+        width: 10%
+
+    .BarName
+        clear: left
+        font-size: 1.1em
+        text-align: center
+        z-index: 0
+
+    .Logo
+        @include mixins.flex($dir: row, $jc: center)
+

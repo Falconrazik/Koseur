@@ -1,0 +1,43 @@
+@mixin flex($dir: column, $jc: center, $ai: center)
+    display: flex
+    flex-direction: $dir
+    justify-content: $jc
+    align-items: $ai
+
+@mixin fullWidthHeight($vw: 100vw, $vh: 100vh)
+    width: $vw
+    min-height: $vh
+
+@mixin drinkAlternating($flt)
+    float: $flt
+    width: 800px
+    margin-top: 6%
+    text-align: center
+    font-size: 2em
+
+@mixin blurBrowserCrossComp($blur)
+    backdrop-filter: blur($blur)
+    -webkit-backdrop-filter: blur($blur)
+    -o-filter: blur($blur)
+    -ms-filter: blur($blur)
+
+@function strip-unit($value) 
+  @return $value / ($value * 0 + 1)
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) 
+  $u1: unit($min-vw)
+  $u2: unit($max-vw)
+  $u3: unit($min-font-size)
+  $u4: unit($max-font-size)
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 
+    & 
+      font-size: $min-font-size
+      @media screen and (min-width: $min-vw) 
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}))
+      @media screen and (min-width: $max-vw) 
+        font-size: $max-font-size
+      
+    
+  
+

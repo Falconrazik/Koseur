@@ -1,0 +1,35 @@
+@use './../styles/mixins.module' as mixins
+@use '../styles/variables.module.sass' as variables
+@import '../pages/[barID]/BarPage.module'
+@import './../pages/HomePage.module'
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap')
+
+.BgWrap
+    @include mixins.fullWidthHeight()
+    position: absolute
+    overflow: hidden
+    z-index: 0
+    animation: fade-in
+    animation-duration: 2s
+
+.BgText
+    font-size: 5rem
+    line-height: 5rem
+    text-align: center
+    padding-top: 5%
+    font-family: -apple-system, "Poiret One"
+
+.Logo
+    margin-left: auto
+    margin-right: auto
+    top: 3%
+    left: 46vw
+    animation: fadeIn
+    animation-duration: 2s
+
+@media screen and (max-width: variables.$ip678p-w) 
+    .BgText
+        font-size: 3rem
